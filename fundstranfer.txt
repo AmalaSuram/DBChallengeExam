@@ -1,0 +1,6 @@
+
+
+-->Implemented separate classes for controller,service and Repository  to the fundtransfer.
+-->On successful transaction, the notification will be triggered to the particular user.
+-->When the accountId is not present ,handling the exception. 
+-->written dto classes for the fundtransfer
