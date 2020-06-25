@@ -3,6 +3,7 @@ package com.db.awmd.challenge.service;
 import com.db.awmd.challenge.domain.Account;
 import com.db.awmd.challenge.dto.FundTransfer;
 import com.db.awmd.challenge.dto.ResponseFundTransfer;
+import com.db.awmd.challenge.exception.BankTransactionException;
 import com.db.awmd.challenge.repository.AccountsRepository;
 import com.db.awmd.challenge.repository.FundTransferRepository;
 
@@ -25,7 +26,7 @@ public class FundTransferService {
 	
 	
 	 @Override
-		public ResponseFundTransfer transaction(FundTransfer fundTransfer) {
+		public ResponseFundTransfer transaction(FundTransfer fundTransfer)throws BankTransactionException  {
 			return this.fundTransferRepository.transaction(fundTransfer);
 		}
 

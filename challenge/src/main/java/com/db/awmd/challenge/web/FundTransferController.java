@@ -13,6 +13,8 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
+import com.db.awmd.challenge.dto.FundTransfer;
+import com.db.awmd.challenge.exception.BankTransactionException;
 import com.db.awmd.challenge.service.AccountsService;
 import com.db.awmd.challenge.service.FundTransferService;
 
@@ -27,7 +29,7 @@ public class FundTransferController {
 	 private final FundTransferService fundTransferService;
 	
 	 @PostMapping("/fundtransfer")
-		public ResponseEntity<ResponseFundTransfer> transaction(@RequestBody FundTransfer fundTransfer) {
+		public ResponseEntity<ResponseFundTransfer> transaction(@RequestBody FundTransfer fundTransfer)throws BankTransactionException{
 
 			ResponseFundTransfer responseFundTransfer = fundTransferService.transaction(fundTransfer);
 			return new ResponseEntity<>(responseFundTransfer, HttpStatus.OK);

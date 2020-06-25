@@ -1,6 +1,14 @@
 
+Below are the some of points I implemented in the given code:
 
 -->Implemented separate classes for controller,service and Repository  to the fundtransfer.
 -->On successful transaction, the notification will be triggered to the particular user.
 -->When the accountId is not present ,handling the exception. 
 -->written dto classes for the fundtransfer
+-->deadlock suitation is handled by using synchronized ker word.
+-->Test cases were written by using Mockito
+
+
+future enhancement:
+
+-->using optimistic locking in multithreading we can achieve 100% deadlock suitation.
