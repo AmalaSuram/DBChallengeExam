@@ -11,6 +11,7 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import org.springframework.stereotype.Repository;
 
+@Repository
 public class FundTransferRepositoryInMemory implements FundTransferRepository   {
 
 	
